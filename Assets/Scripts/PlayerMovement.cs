@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public float dashingTime = 0.2f;
     public float dashingCooldown = 1f;
 
+    Animator animator;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -34,7 +36,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -70,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.linearVelocity.x));
         if (!isWallJumping)
         {
 
