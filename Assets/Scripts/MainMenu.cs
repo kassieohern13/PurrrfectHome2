@@ -3,6 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public static MainMenu instance;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene("GameScene"); 
@@ -15,5 +29,13 @@ public class MainMenu : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("StartMenu"); 
+    }
+    public void NextLevel()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadSceneAsync(sceneName);
     }
 }
