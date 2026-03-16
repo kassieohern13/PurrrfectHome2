@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Blaise2.unity
     guid: cc727e74d200dfa4199857908fe08cc7
+  - enabled: 1
+    path: Assets/Scenes/Blaise3.unity
+    guid: 6b0d7d6d47b1d9a42a66905c77edd1ad
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

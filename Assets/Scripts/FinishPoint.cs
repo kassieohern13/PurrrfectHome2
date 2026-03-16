@@ -19,7 +19,7 @@ public class FinishPoint : MonoBehaviour
         {
             //gotonextlevel
             MainMenu.instance.NextLevel();
-            print("COLLIDED");
+           
         }
     }
 }

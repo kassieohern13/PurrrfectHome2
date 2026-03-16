@@ -38,4 +38,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(sceneName);
     }
+    public void Death()
+    {
+        SceneManager.LoadScene("BlaiseScene");
+    }
 }
