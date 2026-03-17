@@ -795,10 +795,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215bd56e22d712e48b6a2079bbae87b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 8
+  speed: 6
   jumpPower: 16
-  dashingPower: 24
-  dashingTime: 0.2
+  dashingPower: 20
+  dashingTime: 0.15
   dashingCooldown: 0.5
   rb: {fileID: 641716933}
   groundCheck: {fileID: 87454586}
