@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    AudioManager audioManager;
+
     private float horizontal;
     public float speed = 8f;
     public float jumpPower = 16;
     private bool isFacingRight;
+
+
 
     private bool isWallSliding;
     private float wallSlidingSpeed;
@@ -35,7 +39,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -52,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
+            audioManager.PlaySFX(audioManager.jump);
         }
 
         if(Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
@@ -124,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
         {
             isWallJumping = true;
+            audioManager.PlaySFX(audioManager.meow);
             rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
 

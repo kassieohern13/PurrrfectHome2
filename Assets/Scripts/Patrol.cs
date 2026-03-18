@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-
+    AudioManager audioManager;
     public GameObject pointA;
     public GameObject pointB;
     private Rigidbody2D rb;
@@ -16,6 +16,10 @@ public class Patrol : MonoBehaviour
         anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
        
+    }
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -53,6 +57,7 @@ public class Patrol : MonoBehaviour
         {
             //gotofirstlevel
             MainMenu.instance.Death();
+            audioManager.PlaySFX(audioManager.death);
         }
     }
 }

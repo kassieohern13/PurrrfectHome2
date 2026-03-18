@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+           
         }
         else
         {

@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: 038488520b4226b4c999af06f576b892
   - enabled: 1
     path: Assets/Scenes/Blaise2.unity
-    guid: cc727e74d200dfa4199857908fe08cc7
+    guid: 1167040a9b0a96a449202899f3053ce4
   - enabled: 1
     path: Assets/Scenes/Blaise3.unity
     guid: 6b0d7d6d47b1d9a42a66905c77edd1ad
@@ -29,6 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kassie5.unity
     guid: 636effdcb0e22a242a5daaa4bae23df8
+  - enabled: 1
+    path: Assets/Scenes/Blaise 6.unity
+    guid: d8fd66617a835444dbe03b5bf17bf382
+  - enabled: 1
+    path: Assets/Scenes/Blaise 7.unity
+    guid: df527ae50619c904abc195d4e1526e64
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: 7fa98041d439e3b489f9d9d3f52a574f
